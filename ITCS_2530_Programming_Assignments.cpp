@@ -4,29 +4,22 @@ using namespace std;
 
 int main()
 {
-    // Create variables to store the discovery information.
-    string discovery;
-    string location;
-    string weather;
+    // Store the user's answers.
+    string discovery, location, weather;
 
-    // Ask what was found during the adventure.
+	// One word answers are expected, so we can use cin.
     cout << "What did you find on your adventure today? ";
-    getline(cin, discovery);
+    cin >> discovery;
 
-    // Ask where the discovery happened.
     cout << "Where did you make this discovery? ";
-    getline(cin, location);
+    cin >> location;
 
-    // Ask about the weather during the adventure.
     cout << "What was the weather like? ";
-    getline(cin, weather);
+    cin >> weather;
 
-    // Display the completed discovery journal entry.
-    cout << "\n--- Trail Discovery Journal ---\n";
-    cout << "You discovered " << discovery << " at "
-        << location << ".\n";
-    cout << "The weather was " << weather << ".\n";
-    cout << "Every adventure is another opportunity to discover something new!\n";
+    // Display the discovery journal entry.
+    cout << "\nYou discovered " << discovery << " at "
+        << location << ". The weather was " << weather << ".\n";
 
     return 0;
 }
